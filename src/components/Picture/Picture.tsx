@@ -1,10 +1,15 @@
 import * as React from 'react';
-import './Picture.css';
+import Configuration from 'src/models/Configuration';
 
-class Picture extends React.Component {
+interface IPictureProps {
+  src: string;
+}
+
+class Picture extends React.Component<IPictureProps> {
   public render() {
     return (
-      <div/>
+      <img src={this.props.src}
+        height={Configuration.PictureHeight} />
     );
   }
 }
